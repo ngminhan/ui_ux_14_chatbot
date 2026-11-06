@@ -1248,3 +1248,15 @@ textarea.input {
     grid-template-columns: 1fr;
   }
 }
+.notice-dropdown{position:absolute;right:0;top:calc(100% + 10px);width:260px;background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:12px;box-shadow:0 10px 30px rgb(0 0 0 / .12)}
+.notice-dropdown p{margin:8px 0;font-size:13px;color:#475569}
+.social-profile{display:grid;gap:20px}
+.avatar-upload{display:grid;place-items:center;height:120px;width:120px;border-radius:999px;background:#dff7f0;overflow:hidden;cursor:pointer}
+.avatar-upload input{display:none}.avatar-upload img{height:100%;width:100%;object-fit:cover}
+.week-timeline{overflow:auto;max-height:70vh}
+.timeline-hours{grid-template-rows:88px repeat(24,72px)}
+.timeline-column{height:1728px;background:repeating-linear-gradient(to bottom, transparent 0 71px, #e5e7eb 72px),#fff}
+.admin-calendar-event{background:#f9fbff}
+.admin-calendar-event:has(.badge-blue){background:#eaf5ff}
+.admin-calendar-event:has(.badge-yellow){background:#fff8e8}
+.admin-calendar-event:has(.badge-red){background:#fff1f2}

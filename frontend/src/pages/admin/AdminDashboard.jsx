@@ -56,9 +56,10 @@ export function AdminDashboard() {
   const columns = [
     { key: 'id', label: 'ID' },
     { key: 'name', label: 'Tên bác sĩ ↑↓', render: (row) => <div className="flex items-center gap-3"><Avatar tone={row.color}>{row.initials}</Avatar><b>{row.name}</b></div> },
-    { key: 'spec', label: 'Chuyên khoa ↑↓' },
-    { key: 'room', label: 'Phòng khám ↑↓', render: (row) => <Badge>{row.room}</Badge> },
-    { key: 'phone', label: 'Số điện thoại' },
+    { key: 'dob', label: 'Ngày sinh' },
+    { key: 'hometown', label: 'Quê quán' },
+    { key: 'cccd', label: 'Số CCCD' },
+    { key: 'spec', label: 'Chuyên khoa' },
     { key: 'action', label: 'Thao tác', render: (row) => <Link to={`/admin/doctors/${row.id}`} className="mini-btn">Chi tiết</Link> },
   ]
 

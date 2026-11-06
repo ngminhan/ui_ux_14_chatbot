@@ -40,11 +40,11 @@ export function DoctorSchedule() {
             <h2 className="section-title">Timeline lịch trực tuần</h2>
             <div className="week-timeline">
               <div className="timeline-hours">
-                {['GMT+07', '8 AM', '10 AM', '12 PM', '2 PM', '4 PM', '6 PM', '8 PM'].map((hour) => <span key={hour}>{hour}</span>)}
+                {['GMT+07',...Array.from({length:24},(_,h)=>`${String(h).padStart(2,'0')}:00`)].map((hour) => <span key={hour}>{hour}</span>)}
               </div>
-              {doctorSchedule.map((item, index) => (
-                <div className="timeline-day" key={item.day}>
-                  <div className={`timeline-date ${index === 2 ? 'active' : ''}`}><span>{item.day}</span><b>{item.date.split('/')[0]}</b></div>
+              {['Thứ 2','Thứ 3','Thứ 4','Thứ 5','Thứ 6','Thứ 7','CN'].map((day, index) => { const item = doctorSchedule[index % doctorSchedule.length]; return (
+                <div className="timeline-day" key={day}>
+                  <div className={`timeline-date ${index === 2 ? 'active' : ''}`}><span>{day}</span><b>{13 + index}</b></div>
                   <div className="timeline-column">
                     <div className="timeline-event" style={{ top: `${80 + index * 34}px` }}>
                       <b>{item.type}</b>
@@ -53,7 +53,7 @@ export function DoctorSchedule() {
                     </div>
                   </div>
                 </div>
-              ))}
+              )})}
             </div>
           </Card>
         ) : (

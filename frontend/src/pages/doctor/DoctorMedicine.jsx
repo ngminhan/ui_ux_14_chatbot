@@ -13,7 +13,7 @@ export function DoctorMedicine() {
   function addMedicine() {
     setMedicines((current) => [
       ...current,
-      { name: 'Thuốc mới', dose: 'Nhập liều lượng', note: 'Ghi chú sử dụng' },
+      { name: '', dose: '', note: '' },
     ])
   }
 
@@ -68,9 +68,9 @@ export function DoctorMedicine() {
                 <div className="medicine-row medicine-row-head"><b>Tên thuốc</b><b>Liều lượng</b><b>Ghi chú</b><b /></div>
                 {medicines.map((medicine, index) => (
                   <div className="medicine-row" key={`${medicine.name}-${index}`}>
-                    <span>{medicine.name}</span>
-                    <span>{medicine.dose}</span>
-                    <span>{medicine.note}</span>
+                    <input className="input" value={medicine.name} placeholder="Tên thuốc" onChange={(e)=>setMedicines((c)=>c.map((m,i)=>i===index?{...m,name:e.target.value}:m))} />
+                    <input className="input" value={medicine.dose} placeholder="Liều lượng" onChange={(e)=>setMedicines((c)=>c.map((m,i)=>i===index?{...m,dose:e.target.value}:m))} />
+                    <input className="input" value={medicine.note} placeholder="Lưu ý" onChange={(e)=>setMedicines((c)=>c.map((m,i)=>i===index?{...m,note:e.target.value}:m))} />
                     <button onClick={() => setMedicines((current) => current.filter((_, i) => i !== index))}>×</button>
                   </div>
                 ))}

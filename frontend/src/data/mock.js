@@ -1,8 +1,8 @@
 export const doctors = [
-  { id: 'D-001', name: 'Nguyễn Văn Minh', spec: 'Nội tổng quát', room: 'Phòng 102', phone: '0908 123 456', initials: 'NM', color: 'mint' },
-  { id: 'D-002', name: 'Trần Thị Hoa', spec: 'Tim mạch', room: 'Phòng 201', phone: '0912 987 654', initials: 'TH', color: 'blue' },
-  { id: 'D-003', name: 'Lê Hoàng Anh', spec: 'Răng Hàm Mặt', room: 'Phòng 305', phone: '0933 111 222', initials: 'LA', color: 'violet' },
-  { id: 'D-004', name: 'Phạm Minh Tuấn', spec: 'Chỉnh hình', room: 'Phòng 108', phone: '0977 444 555', initials: 'PT', color: 'amber' },
+  { id: 'D-001', name: 'Nguyễn Văn Minh', dob: '1985-03-14', hometown: 'Đà Nẵng', cccd: '048185001234', spec: 'Nội tổng quát', position: 'Bác sĩ trưởng khoa', room: 'Phòng 102', phone: '0908 123 456', initials: 'NM', color: 'mint' },
+  { id: 'D-002', name: 'Trần Thị Hoa', dob: '1988-07-02', hometown: 'Huế', cccd: '046188009876', spec: 'Tim mạch', position: 'Bác sĩ chuyên khoa I', room: 'Phòng 201', phone: '0912 987 654', initials: 'TH', color: 'blue' },
+  { id: 'D-003', name: 'Lê Hoàng Anh', dob: '1990-12-20', hometown: 'Quảng Nam', cccd: '049190007654', spec: 'Răng Hàm Mặt', position: 'Bác sĩ điều trị', room: 'Phòng 305', phone: '0933 111 222', initials: 'LA', color: 'violet' },
+  { id: 'D-004', name: 'Phạm Minh Tuấn', dob: '1982-09-11', hometown: 'Cần Thơ', cccd: '047182006543', spec: 'Chỉnh hình', position: 'Bác sĩ phẫu thuật', room: 'Phòng 108', phone: '0977 444 555', initials: 'PT', color: 'amber' },
 ]
 
 export const cases = [
@@ -23,10 +23,10 @@ export const medicalData = [
 ]
 
 export const scheduleRows = [
-  { time: '08:00', doctor: 'BS. Nguyễn Văn Minh', room: 'Phòng 102', patient: 'Trần Thị Mai', status: 'Đã xác nhận' },
-  { time: '09:30', doctor: 'BS. Trần Thị Hoa', room: 'Phòng 201', patient: 'Lê Văn Hùng', status: 'Chờ khám' },
-  { time: '10:15', doctor: 'BS. Lê Hoàng Anh', room: 'Phòng 305', patient: 'Phạm Quang Minh', status: 'Đang khám' },
-  { time: '14:00', doctor: 'BS. Phạm Minh Tuấn', room: 'Phòng 108', patient: 'Nguyễn Thị Lan', status: 'Đã xác nhận' },
+  { time: '08:00', endTime: '08:30', doctor: 'BS. Nguyễn Văn Minh', room: 'Phòng 102', patient: 'Trần Thị Mai', status: 'Đang tiến hành' },
+  { time: '09:30', endTime: '10:00', doctor: 'BS. Trần Thị Hoa', room: 'Phòng 201', patient: 'Lê Văn Hùng', status: 'Chờ' },
+  { time: '10:15', endTime: '10:45', doctor: 'BS. Lê Hoàng Anh', room: 'Phòng 305', patient: 'Phạm Quang Minh', status: 'Huỷ' },
+  { time: '14:00', endTime: '14:30', doctor: 'BS. Phạm Minh Tuấn', room: 'Phòng 108', patient: 'Nguyễn Thị Lan', status: 'Đang tiến hành' },
 ]
 
 export const doctorSchedule = [

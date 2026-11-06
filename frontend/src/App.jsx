@@ -10,6 +10,7 @@ import { DoctorConsult } from './pages/doctor/DoctorConsult.jsx'
 import { DoctorDetail } from './pages/doctor/DoctorDetail.jsx'
 import { DoctorMedicine } from './pages/doctor/DoctorMedicine.jsx'
 import { DoctorSchedule } from './pages/doctor/DoctorSchedule.jsx'
+import { DoctorSettings } from './pages/doctor/DoctorSettings.jsx'
 import { AdvisorDataList } from './pages/advisor/AdvisorDataList.jsx'
 import { AdvisorForm } from './pages/advisor/AdvisorForm.jsx'
 import { AdvisorChatbot } from './pages/advisor/AdvisorChatbot.jsx'
@@ -35,6 +36,7 @@ export default function App() {
       <Route path="/doctor/consult" element={<DoctorConsult />} />
       <Route path="/doctor/medicine" element={<DoctorMedicine />} />
       <Route path="/doctor/schedule" element={<DoctorSchedule />} />
+      <Route path="/doctor/settings" element={<DoctorSettings />} />
 
       <Route path="/advisor" element={<AdvisorDataList />} />
       <Route path="/advisor/data" element={<AdvisorDataList />} />
